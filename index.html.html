@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Student Registration</title>
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: rgb(0, 128, 21); /* purple background */
+      color: #222;
+      margin: 20px;
+      line-height: 1.4;
+    }
+
+    .container {  
+      width: 720px;
+      max-width: 96%;
+      margin: 0 auto;
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 18px;
+      border-radius: 6px;
+    }
+
+    header h1 {
+      margin: 0 0 12px 0;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    fieldset {
+      border: 1px solid #e1e1e1;
+      padding: 12px;
+      margin-bottom: 12px;
+    }
+    legend { font-weight: bold; font-size: 14px; }
+
+    .form-row {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 10px;
+      align-items: center;
+    }
+
+    .form-row label {
+      width: 140px;
+      font-size: 13px;
+    }
+
+    .form-row input[type="text"],
+    .form-row input[type="email"],
+    .form-row input[type="password"],
+    .form-row input[type="tel"],
+    .form-row select,
+    .form-row textarea {
+      flex: 1;
+      padding: 6px 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    textarea { resize: vertical; min-height: 70px; }
+
+    .inline {
+      display: inline-block;
+      margin-right: 12px;
+      font-size: 13px;
+    }
+
+    .actions {
+      text-align: right;
+      margin-top: 8px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      padding: 8px 14px;
+      border: 1px solid #888;
+      background: #eee;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Student Registration Form</h1>
+    </header>
+
+    <form action="#" method="post" autocomplete="on">
+      <!-- Personal info -->
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <div class="form-row">
+          <label for="fname">First name:</label>
+          <input id="fname" name="firstname" type="text" required />
+        </div>
+
+        <div class="form-row">
+          <label for="lname">Last name:</label>
+          <input id="lname" name="lastname" type="text" required />
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email:</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+
+        <div class="form-row">
+          <label for="password">Password:</label>
+          <input id="password" name="password" type="password" required />
+        </div>
+
+        <div class="form-row">
+          <label for="phone">Phone:</label>
+          <input id="phone" name="phone" type="tel" />
+        </div>
+
+        <div class="form-row">
+          <label for="birth">Birthday:</label>
+          <input id="birth" name="birthdate" type="text" placeholder="MM/DD/YYYY" />
+        </div>
+
+      </fieldset>
+
+      <!-- Academic info -->
+      <fieldset>
+        <legend>Academic Details</legend>
+
+        <div class="form-row">
+          <label for="course">Course / Program:</label>
+          <select id="course" name="course" required>
+            <option value="">-- Select --</option>
+            <option value="beed">BEEd</option>
+            <option value="bsed">BSEd</option>
+            <option value="bit">BIT</option>
+            <option value="bsit">BSIT</option>
+            <option value="bshm">BSHM</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="year">Year level:</label>
+          <select id="year" name="year_level">
+            <option value="1">1st Year</option>
+            <option value="2">2nd Year</option>
+            <option value="3">3rd Year</option>
+            <option value="4">4th Year</option>
+          </select>
+        </div>
+
+      </fieldset>
+
+      <!-- Preferences -->
+      <fieldset>
+        <legend>Preferences</legend>
+
+        <div class="form-row">
+          <label>Gender:</label>
+          <label class="inline"><input type="radio" name="gender" value="male" /> Male</label>
+          <label class="inline"><input type="radio" name="gender" value="female" /> Female</label>
+          <label class="inline"><input type="radio" name="gender" value="other" /> Other</label>
+        </div>
+
+        <div class="form-row">
+          <label>Interests:</label>
+          <label class="inline"><input type="checkbox" name="interest[]" value="coding" /> Coding</label>
+          <label class="inline"><input type="checkbox" name="interest[]" value="design" /> Design</label>
+          <label class="inline"><input type="checkbox" name="interest[]" value="gaming" /> Gaming</label>
+        </div>
+
+        <div class="form-row">
+          <label for="notes">Notes / Bio:</label>
+          <textarea id="notes" name="notes"></textarea>
+        </div>
+
+      </fieldset>
+
+      <!-- Buttons -->
+      <div class="actions">
+        <input type="reset" value="Reset" />
+        <input type="submit" value="Register" />
+      </div>
+    </form>
+  </div>
+</body>
+</html>
